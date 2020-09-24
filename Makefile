@@ -16,7 +16,7 @@ LIBRARY_ASAN_FLAG=-fsanitize=address -fno-omit-frame-pointer
 LIBRARY_MSAN_FLAG=-fsanitize=memory -fPIE -pie -fno-omit-frame-pointer -fsanitize-memory-track-origins=2
 
 
-ALL_TEST_CASES:=$(sort $(wildcard MAOMP_OMP_*.cc))
+ALL_TEST_CASES:=$(sort $(wildcard DSA_OMP_*.cc))
 
 all: $(patsubst %.cc,%.tsan.sanity_check.exe,$(ALL_TEST_CASES)) $(patsubst %.cc,%.asan.sanity_check.exe,$(ALL_TEST_CASES)) \
 	$(patsubst %.cc,%.msan.sanity_check.exe,$(ALL_TEST_CASES)) $(patsubst %.c,%.exe,$(ALL_TEST_CASES)) native

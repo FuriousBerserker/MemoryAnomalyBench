@@ -21,6 +21,6 @@ int main(){
     if (countervar != N) {
         printf("error observed\n");
     }
-    printf("counter: %i expected: 100000\n ",countervar);
+    printf("counter: %i expected: 100000\n",countervar);
     return 0;
 }

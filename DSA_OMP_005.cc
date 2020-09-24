@@ -9,7 +9,7 @@ int count(){
         int countervar = 0;
         #pragma omp parallel for private(countervar)
         for (int i=0; i<N; i++){
-			#pragma omp atomic update
+            #pragma omp atomic update
             countervar++;
         }
     return countervar;
@@ -22,6 +22,6 @@ int main(){
     if (countervar != N) {
         printf("error observed\n");
     }
-    printf("counter: %i expected: 100000\n ",countervar);
+    printf("counter: %i expected: 100000\n",countervar);
     return 0;
 }
